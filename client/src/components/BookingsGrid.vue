@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import BookingCard from "@/BookingCard.js";
+import BookingCard from "./BookingCard";
 export default {
   name: "bookings-grid",
   components: {

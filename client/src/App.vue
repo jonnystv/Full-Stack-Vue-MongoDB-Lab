@@ -1,11 +1,20 @@
 <template>
-  <h1>Hotel bookings</h1>
+  <div id="app">
+    <bookings-grid :bookings="bookings" />
+  </div>
 </template>
 
 <script>
+import BookingsService from "@/services/BookingsService";
+import BookingsGrid from "@/components/BookingsGrid";
+import BookingCard from "@/components/BookingCard";
+
 export default {
   name: "app",
-  components: {},
+  components: {
+    "bookings-grid": BookingsGrid,
+    "booking-card": BookingCard,
+  },
   data() {
     return {
       bookings: [],
