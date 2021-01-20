@@ -1,0 +1,13 @@
+	methods: {
+		handleSubmit() {
+			const payload = {
+				name: this.name,
+				email: this.email,
+				checkedIn: false
+			};
+
+			eventBus.$emit('booking-added', payload);
+			this.name = this.email = '';
+			this.date = false;
+		}
+	}
